@@ -1,0 +1,218 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Space+Grotesk:wght@500;700&display=swap");
+
+:root {
+  --bg-main: radial-gradient(circle at 12% 10%, #3b0764 0%, #1e1b4b 32%, #0b1026 68%, #070b1a 100%);
+  --text-primary: #f8f5ff;
+  --text-muted: #c9bbf4;
+  --card-bg: linear-gradient(145deg, rgba(76, 29, 149, 0.82), rgba(30, 41, 110, 0.85));
+  --card-border: rgba(168, 85, 247, 0.45);
+  --brand-start: #ec4899;
+  --brand-end: #8b5cf6;
+  --feature-hover: #22d3ee;
+  --shadow: 0 20px 40px rgba(16, 24, 40, 0.5);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Outfit", sans-serif;
+  color: var(--text-primary);
+  background: var(--bg-main);
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  width: 260px;
+  height: 260px;
+  border-radius: 999px;
+  filter: blur(38px);
+  z-index: -1;
+}
+
+body::before {
+  top: -80px;
+  right: 5%;
+  background: rgba(236, 72, 153, 0.35);
+}
+
+body::after {
+  bottom: -95px;
+  left: 6%;
+  background: rgba(34, 211, 238, 0.22);
+}
+
+.app-shell {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4.5rem;
+}
+
+.hero,
+.features {
+  border-radius: 24px;
+  border: 1px solid var(--card-border);
+  background: var(--card-bg);
+  backdrop-filter: blur(8px);
+  box-shadow: var(--shadow);
+}
+
+.hero {
+  text-align: center;
+  padding: 3.8rem 1.5rem;
+}
+
+.hero-kicker {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #f9a8d4;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.hero h1 {
+  margin: 0.9rem 0 1rem;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.04;
+}
+
+.hero-subtitle {
+  max-width: 680px;
+  margin: 0 auto 1.9rem;
+  color: var(--text-muted);
+  font-size: 1.08rem;
+  line-height: 1.6;
+}
+
+.cta-button {
+  border: none;
+  border-radius: 999px;
+  color: #fff;
+  font-size: 0.98rem;
+  font-weight: 700;
+  padding: 0.92rem 1.7rem;
+  background-image: linear-gradient(120deg, var(--brand-start), var(--brand-end));
+  cursor: pointer;
+  transition: transform 170ms ease, box-shadow 170ms ease, filter 170ms ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 14px 26px rgba(236, 72, 153, 0.45);
+  filter: saturate(1.12);
+}
+
+.features {
+  margin-top: 1.25rem;
+  padding: 1.45rem;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 1.4rem;
+}
+
+.section-header h2 {
+  font-size: clamp(1.5rem, 2.8vw, 2.2rem);
+}
+
+.section-header p {
+  margin: 0.55rem 0 0;
+  color: var(--text-muted);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.95rem;
+}
+
+.feature-card {
+  background: linear-gradient(155deg, rgba(24, 27, 66, 0.88), rgba(30, 58, 138, 0.74));
+  border: 1px solid rgba(96, 165, 250, 0.4);
+  border-radius: 16px;
+  padding: 1.2rem;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--feature-hover);
+  box-shadow: 0 16px 28px rgba(34, 211, 238, 0.18);
+}
+
+.feature-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 0.8rem;
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: #0f172a;
+  background: linear-gradient(145deg, #f9a8d4, #67e8f9);
+}
+
+.feature-card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.14rem;
+}
+
+.feature-card p {
+  margin: 0;
+  line-height: 1.5;
+  color: #d8cef8;
+}
+
+@media (max-width: 900px) {
+  .features-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .app-shell {
+    padding-top: 1.15rem;
+  }
+
+  .hero,
+  .features {
+    border-radius: 18px;
+  }
+
+  .hero {
+    text-align: left;
+    padding: 2.35rem 1.2rem;
+  }
+
+  .hero-subtitle {
+    margin-left: 0;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-header {
+    text-align: left;
+  }
+}
