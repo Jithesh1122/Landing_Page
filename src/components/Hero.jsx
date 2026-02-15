@@ -1,13 +1,13 @@
 ﻿export default function Hero({ onGetStarted }) {
   return (
     <header className="hero">
-      <p className="hero-kicker">AnimeVerse</p>
-      <h1>Discover, Track, and Talk Anime Daily</h1>
+      <p className="hero-kicker">PulseFlow</p>
+      <h1>Ship Better Products in One Workspace</h1>
       <p className="hero-subtitle">
-        Your colorful anime landing hub for seasonal releases, fan-favorite characters, and active episode discussions.
+        Plan roadmaps, align teams, and track execution with a modern platform built for fast-moving product organizations.
       </p>
       <button className="cta-button" type="button" onClick={onGetStarted}>
-        Start Exploring
+        Explore Features
       </button>
     </header>
   );

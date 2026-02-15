@@ -2,10 +2,10 @@
 
 export default function FeaturesSection({ features }) {
   return (
-    <section className="features" id="features" aria-label="Anime Features">
+    <section className="features" id="features" aria-label="Product Features">
       <div className="section-header">
-        <h2>Everything Anime Fans Need</h2>
-        <p>Built for binge-watchers, collectors, and community-first fans.</p>
+        <h2>Everything Your Team Needs to Deliver</h2>
+        <p>Purpose-built tools for planning, collaboration, and measurable product growth.</p>
       </div>
 
       <div className="features-grid">
