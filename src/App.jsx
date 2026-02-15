@@ -3,22 +3,22 @@ import FeaturesSection from "./components/FeaturesSection";
 
 const featureItems = [
   {
-    title: "Season Tracker",
+    title: "Smart Workflow Builder",
     description:
-      "Follow current and upcoming anime seasons with smart watchlists and episode reminders.",
-    icon: "TV",
+      "Automate repetitive tasks with visual pipelines and event-based triggers.",
+    icon: "WF",
   },
   {
-    title: "Character Hub",
+    title: "Unified Team Workspace",
     description:
-      "Explore top characters, studios, and voice actors with rich profiles and fan ratings.",
-    icon: "CH",
+      "Keep product, design, and engineering aligned in one collaborative dashboard.",
+    icon: "TM",
   },
   {
-    title: "Community Rooms",
+    title: "Real-Time Insights",
     description:
-      "Join live discussions after new episodes, share theories, and post your favorite scenes.",
-    icon: "FM",
+      "Track performance instantly with clean analytics and actionable recommendations.",
+    icon: "AN",
   },
 ];
 
